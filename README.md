@@ -1,0 +1,2 @@
+# Haskell-Toys
+Learning haskell
