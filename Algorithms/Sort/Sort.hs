@@ -28,3 +28,8 @@ insert x [] = [x]
 insert x (y:ys)
             | x < y = x:(y:ys)
             | otherwise = y:(insert x ys)
+
+quickSort :: (Ord a) => [a] -> [a]
+quickSort [] = []
+quickSort [x] = [x]
+quickSort (x:xs) = quickSort [m | m <- xs, m <= x] ++ [x] ++ quickSort [n | n <- xs, n >= x] 
